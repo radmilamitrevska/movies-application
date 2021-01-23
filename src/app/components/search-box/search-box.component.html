@@ -1,0 +1,10 @@
+<div class="search-box">
+  <input
+    [ngModel]="search"
+    (ngModelChange)="searchOnChange($event)"
+    class="search-box__input"
+    type="text"
+    placeholder="Search your favorite movie..."
+  />
+  <span class="search-box__icon"><img src="assets/images/search.svg" alt="search" /></span>
+</div>

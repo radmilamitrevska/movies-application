@@ -1,0 +1,11 @@
+<div class="movies-page">
+  <div class="movies-page__filters">
+    <div class="movies-page__filters__item">
+      <app-search-box (searchEvent)="searchMovieByName($event)"></app-search-box>
+    </div>
+    <div class="movies-page__filters__item">
+      <app-select (selectEvent)="searchMovieByGenre($event)"></app-select>
+    </div>
+  </div>
+  <app-movies-list [movies]="movies"></app-movies-list>
+</div>

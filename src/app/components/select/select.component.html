@@ -1,0 +1,4 @@
+<select [ngModel]="selectedGenre" (ngModelChange)="onChange($event)" class="select">
+  <option value="">All</option>
+  <option [value]="genre.value" *ngFor="let genre of genres | keyvalue">{{ genre.value }}</option>
+</select>

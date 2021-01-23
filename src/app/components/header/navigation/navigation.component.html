@@ -1,0 +1,15 @@
+<div class="navigation">
+  <div
+    class="navigation__btn"
+    [ngClass]="{ 'navigation__btn--active': isVisibleMobileNavigation }"
+    (click)="navigationBtnClick()"
+  >
+    <span class="navigation__btn__bar navigation__btn--bar1"></span>
+    <span class="navigation__btn__bar navigation__btn--bar2"></span>
+    <span class="navigation__btn__bar navigation__btn--bar3"></span>
+  </div>
+  <nav class="navigation__items" [ngClass]="{ 'navigation__items--active': isVisibleMobileNavigation }">
+    <a class="navigation__items__elem" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active" routerLink="/">Home</a>
+    <a class="navigation__items__elem" routerLinkActive="active" routerLink="/movies">Movies</a>
+  </nav>
+</div>

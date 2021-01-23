@@ -1,0 +1,31 @@
+@import './variables';
+
+@mixin small {
+  @media (min-width: $theme-small-breakpoint) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: $theme-medium-breakpoint) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $theme-large-breakpoint) {
+    @content;
+  }
+}
+
+@mixin ex-large {
+  @media (min-width: $theme-ex-large-breakpoint) {
+    @content;
+  }
+}
+
+@mixin for-mouse-and-touch-pad {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}

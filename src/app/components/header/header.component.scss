@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: $theme-bg-dark;
+
+  &__inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: $theme-content-max-width;
+    padding: 0 20px;
+
+    &__logo {
+      width: 100%;
+      max-width: 200px;
+      padding: 10px 0;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+      @include large {
+        max-width: 300px;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    height: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../../styles/variables';
+
+.search-box {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &__input {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    border: none;
+    padding-left: 10px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    padding: 10px 20px;
+    background: rgba(204, 204, 204, 0.5);
+    margin-left: auto;
+    img {
+      width: 100%;
+      max-width: 25px;
+    }
+  }
+}

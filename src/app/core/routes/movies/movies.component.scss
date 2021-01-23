@@ -1,0 +1,19 @@
+:host {
+  width: 100%;
+}
+.movies-page {
+  padding: 20px 0;
+  &__filters {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__item {
+      width: 100%;
+      max-width: 350px;
+      padding-bottom: 10px;
+    }
+  }
+}

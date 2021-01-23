@@ -1,0 +1,59 @@
+@import './src/styles/variables';
+
+.movie {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+
+  &__title {
+    width: 100%;
+    color: $theme-color-primary;
+    padding-bottom: 10px;
+    border-bottom: 5px solid $theme-color-primary;
+  }
+
+  &__details {
+    display: flex;
+
+    img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 5px;
+      -webkit-box-shadow: -3px 1px 11px 3px rgba(0,0,0,0.3);
+      box-shadow: -3px 1px 11px 3px rgba(0,0,0,0.3);
+    }
+
+    &__info {
+      padding: 0 20px;
+      &__item {
+        p {
+          span {
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+        }
+
+        &--genre {
+          padding-top: 20px;
+          span {
+            margin: 5px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 12px;
+            &:first-of-type {
+              margin-left: 0;
+            }
+          }
+        }
+        &--description {
+          margin: 30px 0;
+          padding: 20px;
+          background: #f1f1f1;
+        }
+      }
+    }
+  }
+}

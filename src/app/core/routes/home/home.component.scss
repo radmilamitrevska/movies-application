@@ -1,0 +1,17 @@
+@import './../../../../styles/variables';
+
+:host {
+  width: 100%;
+}
+.home-page {
+  padding: 30px 0;
+  &__title {
+    display: flex;
+    width: 100%;
+    border-bottom: 5px solid $theme-color-primary;
+    color: $theme-color-primary;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+}

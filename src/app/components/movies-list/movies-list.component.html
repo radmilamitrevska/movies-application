@@ -1,0 +1,12 @@
+<div class="movies">
+  <div *ngFor="let movie of movies" class="movies__box">
+    <img class="movies__box__img" src="assets/images/movie-covers/{{ movie.img }}" />
+    <div class="movies__box__details">
+      <span class="movies__box__details__title">{{ movie.name }}</span>
+      <div class="movies__box__details__links">
+        <span class="movies__box__details__links__item">Play</span>
+        <a class="movies__box__details__links__item" [routerLink]="'/movie/'+movie.key" href="#">Details</a>
+      </div>
+    </div>
+  </div>
+</div>
