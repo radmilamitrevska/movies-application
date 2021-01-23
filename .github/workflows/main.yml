@@ -1,0 +1,35 @@
+name: Production Build
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Npm Install
+        run: |
+          npm install
+      - name: Production Build
+        run: |
+          npm run build
+      - name: Unit Tests
+        run: |
+          npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@3.5.9
+        with:
+          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: dist/movies-application # The folder the action should deploy.
