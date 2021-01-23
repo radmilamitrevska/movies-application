@@ -1,4 +1,5 @@
 @import './src/styles/variables';
+@import './src/styles/mixins';
 
 .movie {
   display: flex;
@@ -14,6 +15,11 @@
 
   &__details {
     display: flex;
+    flex-direction: column;
+
+    @include large {
+      flex-direction: row;
+    }
 
     img {
       width: 100%;
