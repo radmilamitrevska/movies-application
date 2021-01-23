@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
+    "build:github": "ng build --prod --base-href /movies-application/",
     "test": "ng test --browsers=ChromeHeadlessCustom --watch=false",
     "test:watch": "ng test",
     "lint": "ng lint",
