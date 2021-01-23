@@ -1,5 +1,7 @@
-# MoviesApp
+# Site preview
+Link: [https://radmilamitrevska.github.io/movies-application/](https://radmilamitrevska.github.io/movies-application/)
 
+# MoviesApp
 - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0
 - This project is split in multiple modules, each responsible for his own functionality.
 - There are three routes, home, movies and movie route.
@@ -10,6 +12,7 @@
 - Responsive design.
 - I have used BEM css style guide.
 - Containerizing application for production using Docker
+- Used CI/CD Github pages
 
 Things that should be integrated if this was bigger project:
 - Take JSON with HTTP if is outside of the project folders
